@@ -5,7 +5,7 @@ import { evaluate } from '../utils/js/test/utils';
 
 import AmauiQueue from '../src';
 
-group('@amaui/queue', () => {
+group('AmauiQueue', () => {
 
   to('AmauiQueue', async () => {
     const value = new AmauiQueue([1, 2, 3, 4], 14);
