@@ -93,6 +93,19 @@ Test
   yarn test
 ```
 
+One time local setup
+
+Install docker and docker-compose
+
+  - https://docs.docker.com/get-docker
+  - https://docs.docker.com/compose/install
+
+Make docker containers
+
+```sh
+  yarn docker
+```
+
 ### Prod
 
 Build
