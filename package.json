@@ -2,7 +2,7 @@
   "name": "@onesy/queue",
   "version": "1.0.0",
   "description": "Queue",
-  "repository": "https://github.com/onesy-org/onesy-queue.git",
+  "repository": "https://github.com/onesy-me/queue.git",
   "author": "Lazar <lazareric2@gmail.com>",
   "license": "MIT",
   "private": false,
