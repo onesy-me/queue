@@ -1,17 +1,17 @@
 /* tslint:disable: no-shadowed-variable */
-import { assert } from '@amaui/test';
+import { assert } from '@onesy/test';
 
 import { evaluate } from '../utils/js/test/utils';
 
-import AmauiQueue from '../src';
+import OnesyQueue from '../src';
 
-group('AmauiQueue', () => {
+group('OnesyQueue', () => {
 
-  to('AmauiQueue', async () => {
-    const value = new AmauiQueue([1, 2, 3, 4], 14);
+  to('OnesyQueue', async () => {
+    const value = new OnesyQueue([1, 2, 3, 4], 14);
 
     const valueBrowsers = await evaluate((window: any) => {
-      const value = new window.AmauiQueue([1, 2, 3, 4], 14);
+      const value = new window.OnesyQueue([1, 2, 3, 4], 14);
 
       return [value.value, value.limit];
     });
@@ -21,13 +21,13 @@ group('AmauiQueue', () => {
     values.forEach(value => assert(value).eql([[1, 2, 3, 4], 14]));
   });
 
-  group('amauiQueue', async () => {
+  group('onesyQueue', async () => {
 
     to('length', async () => {
-      const value = new AmauiQueue([1, 2, 3, 4], 14);
+      const value = new OnesyQueue([1, 2, 3, 4], 14);
 
       const valueBrowsers = await evaluate((window: any) => {
-        const value = new window.AmauiQueue([1, 2, 3, 4], 14);
+        const value = new window.OnesyQueue([1, 2, 3, 4], 14);
 
         return value.length;
       });
@@ -38,10 +38,10 @@ group('AmauiQueue', () => {
     });
 
     to('first', async () => {
-      const value = new AmauiQueue([1, 2, 3, 4], 14);
+      const value = new OnesyQueue([1, 2, 3, 4], 14);
 
       const valueBrowsers = await evaluate((window: any) => {
-        const value = new window.AmauiQueue([1, 2, 3, 4], 14);
+        const value = new window.OnesyQueue([1, 2, 3, 4], 14);
 
         return value.first;
       });
@@ -52,10 +52,10 @@ group('AmauiQueue', () => {
     });
 
     to('peak', async () => {
-      const value = new AmauiQueue([1, 2, 3, 4], 14);
+      const value = new OnesyQueue([1, 2, 3, 4], 14);
 
       const valueBrowsers = await evaluate((window: any) => {
-        const value = new window.AmauiQueue([1, 2, 3, 4], 14);
+        const value = new window.OnesyQueue([1, 2, 3, 4], 14);
 
         return value.peak;
       });
@@ -66,10 +66,10 @@ group('AmauiQueue', () => {
     });
 
     to('empty', async () => {
-      const value = new AmauiQueue([], 14);
+      const value = new OnesyQueue([], 14);
 
       const valueBrowsers = await evaluate((window: any) => {
-        const value = new window.AmauiQueue([], 14);
+        const value = new window.OnesyQueue([], 14);
 
         return value.empty;
       });
@@ -80,10 +80,10 @@ group('AmauiQueue', () => {
     });
 
     to('full', async () => {
-      const value = new AmauiQueue([1, 2, 3, 4], 4);
+      const value = new OnesyQueue([1, 2, 3, 4], 4);
 
       const valueBrowsers = await evaluate((window: any) => {
-        const value = new window.AmauiQueue([1, 2, 3, 4], 4);
+        const value = new window.OnesyQueue([1, 2, 3, 4], 4);
 
         return value.full;
       });
@@ -96,10 +96,10 @@ group('AmauiQueue', () => {
     group('push', () => {
 
       to('push', async () => {
-        const value = new AmauiQueue([], 14);
+        const value = new OnesyQueue([], 14);
 
         const valueBrowsers = await evaluate((window: any) => {
-          const value = new window.AmauiQueue([], 14);
+          const value = new window.OnesyQueue([], 14);
 
           return [value.push(1, 2, 3, 4), value.first, value.length];
         });
@@ -110,10 +110,10 @@ group('AmauiQueue', () => {
       });
 
       to('limit', async () => {
-        const value = new AmauiQueue([1, 2, 3, 4], 4);
+        const value = new OnesyQueue([1, 2, 3, 4], 4);
 
         const valueBrowsers = await evaluate((window: any) => {
-          const value = new window.AmauiQueue([1, 2, 3, 4], 4);
+          const value = new window.OnesyQueue([1, 2, 3, 4], 4);
 
           return [value.push(14), value.first, value.length];
         });
@@ -126,10 +126,10 @@ group('AmauiQueue', () => {
     });
 
     to('pop', async () => {
-      const value = new AmauiQueue([1, 2, 3, 4], 14);
+      const value = new OnesyQueue([1, 2, 3, 4], 14);
 
       const valueBrowsers = await evaluate((window: any) => {
-        const value = new window.AmauiQueue([1, 2, 3, 4], 14);
+        const value = new window.OnesyQueue([1, 2, 3, 4], 14);
 
         return [value.pop(), value.first, value.length];
       });
@@ -140,12 +140,12 @@ group('AmauiQueue', () => {
     });
 
     to('clear', async () => {
-      const value = new AmauiQueue([1, 2, 3, 4], 14);
+      const value = new OnesyQueue([1, 2, 3, 4], 14);
 
       value.clear();
 
       const valueBrowsers = await evaluate((window: any) => {
-        const value = new window.AmauiQueue([1, 2, 3, 4], 14);
+        const value = new window.OnesyQueue([1, 2, 3, 4], 14);
 
         value.clear();
 

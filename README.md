@@ -4,11 +4,11 @@
 
 <p align='center'>
   <a target='_blank' rel='noopener noreferrer' href='#'>
-    <img src='utils/images/logo.svg' alt='amaui logo' />
+    <img src='utils/images/logo.svg' alt='onesy logo' />
   </a>
 </p>
 
-<h1 align='center'>amaui Queue</h1>
+<h1 align='center'>onesy Queue</h1>
 
 <p align='center'>
   Queue
@@ -39,7 +39,7 @@
 ### Add
 
 ```sh
-yarn add @amaui/queue
+yarn add @onesy/queue
 ```
 
 ### Use cases
@@ -53,29 +53,29 @@ yarn add @amaui/queue
 ### Use
 
 ```javascript
-  import AmauiQueue from '@amaui/queue';
+  import OnesyQueue from '@onesy/queue';
 
   // Make a new queue instance
-  const amauiQueue = new AmauiQueue();
+  const onesyQueue = new OnesyQueue();
 
   // Add values
-  amauiQueue.push(1, 2, 3, 4);
+  onesyQueue.push(1, 2, 3, 4);
 
-  amauiQueue.first;
+  onesyQueue.first;
   // 1
 
-  amauiQueue.length;
+  onesyQueue.length;
   // 4
 
-  const value = amauiQueue.pop();
+  const value = onesyQueue.pop();
 
   value;
   // 1
 
-  amauiQueue.first;
+  onesyQueue.first;
   // 2
 
-  amauiQueue.length;
+  onesyQueue.length;
   // 3
 ```
 

@@ -1,1 +1,1 @@
-export { default } from './AmauiQueue';
+export { default } from './OnesyQueue';

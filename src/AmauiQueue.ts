@@ -1,13 +1,13 @@
-import { is } from '@amaui/utils';
+import { is } from '@onesy/utils';
 
-export type TAmauiQueueValue = Array<any>;
+export type TOnesyQueueValue = Array<any>;
 
-export default class AmauiQueue {
-  public value: TAmauiQueueValue = [];
+export default class OnesyQueue {
+  public value: TOnesyQueueValue = [];
   public limit = 1e9;
 
   public constructor(
-    value: TAmauiQueueValue,
+    value: TOnesyQueueValue,
     limit: number
   ) {
     if (is('array', value)) this.value = value;
@@ -25,7 +25,7 @@ export default class AmauiQueue {
 
   get full() { return this.length === this.limit; }
 
-  public push(...values: TAmauiQueueValue): boolean {
+  public push(...values: TOnesyQueueValue): boolean {
     for (const value of values) {
       if (this.length >= this.limit) return false;
 
@@ -39,7 +39,7 @@ export default class AmauiQueue {
     return this.value.pop();
   }
 
-  public clear(): AmauiQueue {
+  public clear(): OnesyQueue {
     this.value = [];
 
     return this;
